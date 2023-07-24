@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ * swap_int - swaps the value of two pointers
+ * @a: the 1st pointer parameter
+ * @b: the 2nd pointer parameter
+ */
+
+void swap_int(int *a, int *b)
+{
+	int m;
+
+	m = *a;
+	*a = *b;
+	*b = m;
+}
