@@ -2,7 +2,8 @@
 int str_len(char *str);
 
 /**
- * _strncat - concatenates src string to dest string of n number of bytes/xters i.e append
+ * _strncat - concatenates src string to dest
+ * string of n number of bytes/xters i.e append
  * @src: source to copy from
  * @dest: destination to append to.
  * @n: number of bytes to be copied
