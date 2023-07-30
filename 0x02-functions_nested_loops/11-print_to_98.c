@@ -1,5 +1,4 @@
 #include "main.h"
-int digit_count(int n);
 void putchar_print_int(int n);
 
 /**
@@ -10,64 +9,84 @@ void putchar_print_int(int n);
 
 void print_to_98(int n)
 {
+	int a;
+
 	if (n > 98)
 	{
-		int a, rev, digit, count;
 
 		for (a = n; a >= 98 && a <= n; a++)
 		{
 			putchar_print_int(a);
 		}
+		_putchar('\n');
 	}
-	else
+	else if (n < 98)
 	{
-		for (a = n; a >= n && a <= 98; n++)
+		for (a = n; a >= n && a <= 98; a++)
 		{
-			if (n > 9)
+			if (a > 9)
 			{
-				putchar_print_int;
+				putchar_print_int(a);
 			}
-			else
-				_putchar('0' + n)
-
-
-			void putchar_print_int(int n)
+			else if (a < 10) /*for +ve and -ve digits */
 			{
-				int rev;
-
-				rev = 1; /* to cover for leading zero */
-
-				digit_count(n);
-
-				while (n > 0)
+				if (a >= 0)
 				{
-					rev = rev * 10 + n % 10;
-					n /= 10;
+                                        _putchar('0' + a);
 				}
-
-				while (digit_count - 1)	/* to exempt the 1, the digit added */
+				else  /* for negetive digits */
 				{
-					_putchar('0' + rev % 10);
-					rev /= 10;
+					a = -a;
+					
+					if (a > 9) /* for negetives > 9*/
+					{
+						putchar_print_int(a);
+					}
+					else if (a < 10)	/*for negetive < 9*/
+					{
+						a = -a;
+						_putchar('-');
+						_putchar('0' + a);
+					}
 				}
-
-				_putchar(',');
-				_putchar(' ');
 			}
-
-			int digit_count(int n)
-			{
-				int count;
-
-				count = 0;
-
-				while (n > 0)
-				{
-					n /= 0;
-					count++;
-				}
-				return (count);
-			}
-
+		}
 	}
+		_putchar('\n');
+
 }
+
+		void putchar_print_int(int n)
+		{
+			int rev, count, isneg;
+
+			rev = 1; /* to cover for leading zero */
+			count = 0;
+			isneg = 0;
+
+			if (n < 0)	/*take care of negative values*/
+			{
+				n = -n;
+				isneg = 1;
+			}
+
+			while (n > 0)
+			{
+				rev = rev * 10 + n % 10;
+				n /= 10;
+				count++;
+			}
+
+			if (isneg)	/*prints -minus if is negative */
+				_putchar('-');
+
+			while (count)	/* to exempt the 1, the digit added we must use count*/
+			{
+				_putchar('0' + rev % 10);
+				rev /= 10;
+				count--;
+			}
+
+			_putchar(',');
+			_putchar(' ');
+		}
