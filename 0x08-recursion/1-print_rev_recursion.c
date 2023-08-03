@@ -1,21 +1,15 @@
 #include "main.h"
 
 /**
- * void _puts_recursion - prints a xter or a string using recursion
+ *  _print_rev_recursion - prints a xter or a string
+ *  using recursioni in reverse
  * @s: the string to pe printed
  */
 
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
-	_putchar(*s);
-
-	if (*s != '\0')
-		_puts_recursion(s + 1);
-
-	if(*s == '\0')
-	{
-		_putchar('\0');
-		_putchar('\n');
-	}
+	if (*s == '\0')
+		return;
+	_print_rev_recursion(s + 1);
+	_putchar(*s);	/* prints only when unwinding */
 }
-
