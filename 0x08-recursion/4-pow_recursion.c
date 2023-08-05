@@ -4,7 +4,7 @@
  * _pow_recursion - finds the power of a number
  * @x: the base of the number
  * @y: the power of the number
- * Retrn: the result
+ * Return: the result
  */
 
 int _pow_recursion(int x, int y)
