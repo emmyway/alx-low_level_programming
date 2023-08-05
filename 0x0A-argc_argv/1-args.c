@@ -1,7 +1,9 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry of prog
+ * @argc: count number of argument passed to main
+ * @argv: array of all argument passed to main including name
  * Return: 0 on success
  */
 
