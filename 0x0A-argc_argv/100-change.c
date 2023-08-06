@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int i, count, num;
-	int coins[] = {25,10,5,2,1};
+	int coins[] = {25, 10, 5, 2, 1};
 
 	count = 0;
 
@@ -38,12 +38,8 @@ int main(int argc, char *argv[])
 				num -= coins[i];
 				count++;
 
-			/**	printf("%d\n", num);
-		                printf("%d\n", coins[i]);*/
 			}
 		}
-		/*printf("%d\n", num);
-		printf("%d\n", coins[i]);*/
 		printf("%d\n", count);
 	}
 	return (0);
