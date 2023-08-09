@@ -14,7 +14,8 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	while(str)
+	len = 0;
+	while(str[len])
 		len++;
 
 	coppy = malloc(sizeof(char) * len);
