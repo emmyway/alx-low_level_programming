@@ -9,7 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int m, n, len1, len2, len3;
+	int m, len1, len2, len3, n;
 	char *concat;
 
 
@@ -30,15 +30,18 @@ char *str_concat(char *s1, char *s2)
 	len3 = len1 + len2;
 
 	/** allocate memory based on length of two strings */
-	concat = malloc(sizeof(char) * len3);
+	concat = malloc(sizeof(char) * len3 + 1);
 
 	/** copy two strings into 1 **/
 	for (m = 0; m < len1; m++)
 		concat[m] = s1[m];
 
-	for (n  = 0; n < len2; n++)
-		concat[n] = s1[n];
+	for (n = 0; n < len2; n++)
+	{
+		concat[m] = s2[n];
+		m++;
+	}
 
-	concat[n] = '\0';
+	concat[m] = '\0';
 	return (concat);
 }
