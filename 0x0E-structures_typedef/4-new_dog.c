@@ -3,6 +3,7 @@
 /**
  * _strlen - counts length of string
  * @str: pointer to streing to be counted
+ * Return: length of string
  */
 int _strlen(*str)
 {
@@ -19,6 +20,7 @@ int _strlen(*str)
  * _strcpy - copies strring from source to dest buffer
  * @src: pointer to source to be copied
  * @dest: pointer to buffer to be copied to
+ * Return: pointer to dest buffer
  */
 char *_strcpy(*dest, *src)
 {
@@ -38,6 +40,7 @@ char *_strcpy(*dest, *src)
  * @name: string name of dog
  * @age: the age thereof
  * @owner: the string name if owner
+ * Return: dog, the copy of struct type
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
