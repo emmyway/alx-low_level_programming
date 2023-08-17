@@ -1,10 +1,10 @@
 #include "funtion_pointers.h"
 
 /**
- * array_iterator - 
+ * array_iterator - fxn prints array element using pointer function
  * @size: size of array
- * @action: the pointer to print
- * @array: the array 
+ * @action: the pointer to function
+ * @array: the array
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
