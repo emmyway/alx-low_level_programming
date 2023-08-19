@@ -1,4 +1,4 @@
-#include "funtion_pointers.h"
+#include "function_pointers.h"
 
 /**
  * array_iterator - fxn prints array element using pointer function
@@ -11,8 +11,9 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int t;
 
-	if (array == NULL || array NULL)
+	if (array == NULL || action == NULL)
 	{
 		for (t = 0; t < size; t++)
 			action(array[t]);
 	}
+}
