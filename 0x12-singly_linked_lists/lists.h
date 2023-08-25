@@ -1,11 +1,14 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+#include <stddef.h>
 /**
- * struct list_s - the singly linked list
- * @str: a born malloc string given
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
  * @next: points to the next node
- * @len: the length of the string
+ *
+ * Description: singly linked list node structure
  */
 
 typedef struct list_s
@@ -13,7 +16,7 @@ typedef struct list_s
 	char *str;
 	unsigned int len;
 	struct list_s *next;
-}list_t;
+} list_t;
 
 void free_list(list_t *head);
 list_t *add_node_end(list_t **head, const char *str);
