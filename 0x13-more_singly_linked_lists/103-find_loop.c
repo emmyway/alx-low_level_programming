@@ -2,7 +2,7 @@
 /**
  * *find_listint_loop - fxn finds and catches address
  * loop in a linked lists
- * @*head: the given link list
+ * @head: the given link list
  * Return: address to found node, or NULL if fail
  */
 
@@ -14,11 +14,11 @@ listint_t *find_listint_loop(listint_t *head)
 	if (!head)
 		return (NULL);
 
-	while (low && top && top && fast->next)
+	while (low && top && top->next)
 	{
 		top = top->next->next;
-		low =->next;
-		if(fast == low)
+		low = low->next;
+		if (top == low)
 		{
 			low = top;
 			while (low != top)
@@ -29,5 +29,5 @@ listint_t *find_listint_loop(listint_t *head)
 			return (top);
 		}
 	}
-	reurn (NULL);
+	return (NULL);
 }
