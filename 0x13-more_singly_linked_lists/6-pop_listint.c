@@ -22,7 +22,7 @@ int pop_listint(listint_t **head)
 		return (tempstore);
 	}
 
-	listsint_t *ptr;
+	listint_t *ptr;
 	ptr = (*head)->next;
 	tempstore = (*head)->n;
 	free(*head);
