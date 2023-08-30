@@ -8,7 +8,7 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	list_t *low = head;
+	listint_t *low = head;
 	listint_t *top = head;
 
 	if (!head)
