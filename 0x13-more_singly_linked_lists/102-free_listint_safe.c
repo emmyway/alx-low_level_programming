@@ -2,7 +2,7 @@
 
 /**
  * free_listint_safe - fxn frees a given linked list
- * @h:pointer to list
+ * @h: pointer to list
  * Return: size freed
  */
 size_t free_listint_safe(listint_t **h)
@@ -14,24 +14,27 @@ size_t free_listint_safe(listint_t **h)
 	if (!*h || !h)
 		return (0);
 
-	while (*h)
+	else
 	{
-		diff = *h - (*h)->next;
-		if (diff <= 0)
+			while (*h)
 		{
-			free(*h);
-			*h = NULL;
-			len++;
-			break;
+			diff = *h - (*h)->next;
+			if (diff <= 0)
+			{
+				free(*h);
+				*h = NULL;
+				len++;
+				break;
+			}
+			else
+			{
+				current = (*h)->next;
+				free(*h);
+				*h = current;
+				len++;
+			}
 		}
-		else
-		{
-			current = (*h)->next;
-			free(*h);
-			*h = current;
-			len++;
-		}
+		*h = NULL;
+		return (len);
 	}
-	*h = NULL;
-	return (len);
 }
