@@ -16,7 +16,7 @@ int pop_listint(listint_t **head)
 	else if (**head->next == NULL)
 	{
 		tempstore = head->n;
-		free(head);
+		free(*head);
 		head->next = NULL;
 
 		return (tempstore);
