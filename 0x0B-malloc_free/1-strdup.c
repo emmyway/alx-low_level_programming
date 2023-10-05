@@ -1,27 +1,31 @@
 #include "main.h"
 
 /**
- * create_array - fxn creates array of unknown size and fill with xter
- * @size: the size of array
- * @c: the character to fill array
+ *  _strdup - fxn creates array of unknown size and fill with xter
+ * @str: the string of xters to be duplicate
  * Return: pointer to array on success or NULL if failed
  */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	unsigned int i;
-	char *A;
+	int i, len;
+	char *new_str;
 
-	if (size == 0)
+	if (str == NULL)
 		return (NULL);
 
-	A = (char *)malloc(size * sizeof(char));
+	/*find length of source string*/
+	len = 0;
+	while (str[len])
+		len++;
 
-	if (A == NULL)
+	new_str = (char *)malloc((len + 1) * sizeof(char));
+
+	if (new_str == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
-		A[i] = c;
+	for (i = 0; i <= len; i++)
+		new_str[i] = str[i];
 
-	return (A);
+	return (new_str);
 }
