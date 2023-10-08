@@ -20,7 +20,7 @@ int error_check(int argc, char *argv[])
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
-		return (0);
+		exit(0);
 	}
 
 	for (i = 0; argv[1][i]; i++)
