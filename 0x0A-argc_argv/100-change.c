@@ -46,9 +46,7 @@ int main(int argc, char *argv[])
 	int cents, count;
 
 	if (error_check(argc, argv) != 0)
-	{
-		return 1; /* Error occurred, return with an error code */
-	}
+		return (1); /* Error occurred, return with an error code */
 
 	cents = atoi(argv[1]);
 	count = 0;
