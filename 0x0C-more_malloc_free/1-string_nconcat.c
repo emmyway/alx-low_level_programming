@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len3 = len1 + n;
 
 	/* allocate string */
-	new_str = malloc(len3 + 1);
+	new_str = malloc(sizeof(char) * (len3 + 1));
 	if (new_str == NULL)
 		return (NULL);
 	/* begin copying */
