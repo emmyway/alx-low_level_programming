@@ -2,6 +2,7 @@
 
 /**
  * array_iterator - fxn executes a function given as parameter
+ * @array: the the target array
  * @size: is the size of the array
  * @action: is a pointer to the function
  */
