@@ -15,3 +15,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (ptr == NULL)
 		return (malloc(new_size * unsigned int));
+
+	new_ptr while(ptr[len])
+		len++;
+
+
