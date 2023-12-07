@@ -14,7 +14,6 @@ size_t print_dlistint(const dlistint_t *h)
 	if (h == NULL)
 	{
 		dprintf(2, "list is empty\n");
-		exit(1);
 	}
 
 	/*create and iterating poointer*/

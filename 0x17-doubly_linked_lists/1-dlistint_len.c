@@ -14,7 +14,6 @@ size_t dlistint_len(const dlistint_t *h)
 	if (h == NULL)
 	{
 		dprintf(2, "list is empty\n");
-		exit(1);
 	}
 
 	/*assign iterating pointer*/
