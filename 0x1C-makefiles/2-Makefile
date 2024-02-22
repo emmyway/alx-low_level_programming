@@ -1,0 +1,11 @@
+CC := gcc
+SRC := $(wildcard *.c)
+NAME := school
+OBJ := $(SRC:%.c=%.o)
+LINKER := -lm
+
+%.o:%.c
+	$(CC) -c $< -o $@
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
