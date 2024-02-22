@@ -1,0 +1,8 @@
+CC := gcc
+SRC := ${wildcard *.c}
+EXECUTABLE := school
+
+${EXECUTABLE}: $(SRC)
+	$(CC) $^ -o $@
+
+all: ${EXECUTABLE}
