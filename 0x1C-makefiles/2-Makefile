@@ -2,10 +2,13 @@ CC := gcc
 SRC := $(wildcard *.c)
 NAME := school
 OBJ := $(SRC:%.c=%.o)
-LINKER := -lm
+
+.PHONY: all
 
 %.o:%.c
 	$(CC) -c $< -o $@
 
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
+
+all: $(NAME)
