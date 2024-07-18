@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 
 	if (close(fd_dest) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fdww %d\n", fd_source);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_source);
 		exit(100);
 	}
 
